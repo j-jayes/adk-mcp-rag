@@ -12,6 +12,7 @@ from .tools import PromptLoader, MCPTools
 
 # Modifying here to try with agent tools.
 from google.adk.tools.agent_tool import AgentTool
+from .sub_agents.unit_conversion import unit_conversion_agent
 
 
 # Load environment variables from .env file in the parent directory
@@ -50,7 +51,8 @@ class Agents():
             name='ask_rag_agent',
             instruction=self.prompt_configs['ask_rag_agent']['instruction_prompt'],
             tools=[
-                toolset
+                toolset,
+                AgentTool(agent=unit_conversion_agent)
             ],
             generate_content_config=types.GenerateContentConfig(
                 temperature=0.2,
@@ -78,7 +80,8 @@ class Agents():
             name='ask_rag_agent',
             instruction=self.prompt_configs['ask_rag_agent']['instruction_prompt'],
             tools=[
-                toolset
+                toolset,
+                AgentTool(agent=unit_conversion_agent)
             ],
             generate_content_config=types.GenerateContentConfig(
                 temperature=0.2,
