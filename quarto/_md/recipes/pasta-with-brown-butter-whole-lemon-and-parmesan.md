@@ -1,0 +1,130 @@
+# Pasta With Brown Butter, Whole Lemon, and Parmesan
+Andy Baraghani
+2025-10-07
+
+## Blurb
+
+A weeknight pasta that utilizes simple pantry ingredients in a luxurious
+way. A sliced whole lemon gives unbeatably fresh aroma from the skin,
+bitter complexity from the pith, and tart, puckery juice from the flesh.
+Thin slices soften evenly and ensure that the lemon plays nicely with
+the pasta, brown butter, and Parmesan.
+
+## Ingredients
+
+- 1 lb. short tube pasta (such as paccheri or rigatoni)
+- Kosher salt
+- 8 Tbsp. (1 stick) unsalted butter, cut into pieces, divided
+- 1 small regular lemon or Meyer lemon, very thinly sliced into rounds,
+  seeds removed
+- 1 oz. Parmesan, finely grated, plus more for serving
+- Freshly ground black pepper
+
+## Instructions
+
+1.  Cook pasta in a large pot of boiling generously salted water,
+    stirring occasionally, until very al dente, about 2 minutes less
+    than package directions (pasta will finish cooking in the sauce).
+2.  Meanwhile, heat half of the butter in a large Dutch oven or other
+    heavy pot over medium until melted. Add lemon slices and cook,
+    stirring often, until softened and bottom of pot is browned in
+    spots, 5–7 minutes. Using tongs, transfer one-third of lemon slices
+    to a plate; set aside.
+3.  Just before pasta is al dente, scoop out 2 cups pasta cooking
+    liquid. Add 1½ cups pasta cooking liquid to butter sauce. (This may
+    seem like a lot of liquid, but it will thicken once the remaining
+    ingredients are added.) Add remaining butter a piece at a time,
+    whisking until each piece is incorporated before adding more, until
+    the sauce is emulsified and creamy.
+4.  Drain pasta and add to sauce. Cook, stirring often and adding 1 oz.
+    Parmesan a little at a time. Once all of the cheese is added,
+    continue to cook, still stirring, until cheese is melted and sauce
+    is creamy and clings to pasta, about 3 minutes. If sauce looks very
+    thick, add more pasta cooking liquid 1–2 Tbsp. at a time to thin
+    (saucier is ideal as it will thicken as it cools). Remove from heat
+    and sprinkle with an almost ridiculous amount of pepper (about 2
+    tsp.); toss once more.
+5.  Serve pasta topped with reserved lemon rounds and more Parmesan.
+
+## End-blurb
+
+## Comments
+
+- Deserving of all 5 stars. Absolutely! Delicious! I even went back for
+  a 3rd helping. So lemony - cheesy - and peppery! What intrigued me
+  about this dish was sauteing the entire lemon… I’ve never heard of
+  that. I tweaked the recipe by adding red pepper flakes to the lemon
+  butter sauce … might as well add some heat if you are going to douse
+  it with copious amounts of pepper…then at the end I added fresh
+  parsley and basil from my herb garden. Wooza…it was fantastic. My
+  husband and I entertain a lot and we will judge a new recipe based on
+  if it’s company worthy. It is! I used regular lemon since my grocery
+  store didn’t offer a Myer’s lemon. For the people who said t was
+  bitter - please try again - you might have had a bad lemon. It’s worth
+  the extra effort of one more time.
+- Loved this dish! I used rigatoni since that was all that was
+  available, but it worked perfectly. I didn’t blanch the lemon like
+  others recommended, I just sliced it super thinly (like 3–5mm) and
+  made sure to remove all the seeds. I also removed the softened lemon
+  slices about a minute before the butter had browned. Everything turned
+  out great, and I loved the zing of the lemon and the sharp flavor from
+  the black pepper paired with the buttery, salty sauce. 10/10 recommend
+- Meh. It was fine. Not awful. But not really worth the effort at all.
+  Didn’t give me more nuance than I would have gotten from simple
+  buttered pasta topped with Parmesan.
+- operator error, i’m sure. but where/how/why, i’m not sure. i
+  essentially had soup made out of a stick of butter, thinly sliced
+  lemon, and too much (but the called-for amount) of the pasta water.
+  hoping against logic, i added the parm–maybe IT would thicken it up?
+  nope. wth, i dumped the pasta in & slurped it up anyway. the flavors
+  were heavenly, how could they not be? butter, chz, and lemon! but i
+  truly would’ve liked a successful execution of the recipe–i’m a pretty
+  good cook. ah, ya can’t always get it right!
+- Made this last night for a special Sunday Dinner and it was D-lish! I
+  modified the recipe just a tad by using Lobster Ravioli and adding
+  garlic shrimp to the final product, I used Meyer Lemons, removed ALL
+  seeds, Kerrygold Butter for the best butter flavor and squeezed an
+  additional reg lemon into the sauce just prior to serving, garnished
+  with chives. Zero bitterness, just sublime savory lemon buttery sauce
+  which we both loved and would serve to company which is our barometer,
+  would we serve this to company? A very hearty yes sir on this one.
+  Served w/grilled garlic bread on side to wipe out the bowl because it
+  was that tasty. Wish this review system allowed me to post my finished
+  product pics of the dish with my mods. We really loved it and
+  encourage you to try it too.
+- I’ve made this a few times and love it. I use regular lemons and
+  because we both love lemon, I use a whole lemon for the 2 of us. So
+  simple and delicious.
+- Really tasty! After reading the reviews, I wasn’t sure what to expect.
+  I used a regular lemon and added a little honey when I caramelized the
+  lemons. I probably didn’t cook enough pasta because I had a lot of
+  sauce. However, that worked well with my dinner of steamed broccoli
+  and baked salmon (with lemon). We were able to add some sauce on the
+  broccoli and salmon. My husband liked it too, so I’ll make it again
+- I you, like me, can’t decide between the Meyer lemon and the regular
+  lemon based on the discussion in the reviews, I went with a Meyer
+  lemon and even though I didn’t follow the recipe to the “T”, I really
+  enjoyed the dish. If you’re on the fence about whether to make this
+  dish or not, I would say don’t. It’s just pasta in a
+  lemony-cheesy-peppery sauce, very delicious but not worth all the
+  discussion in the comment section.
+- This was a nice surprise and I really enjoyed the flavors. Added some
+  toasted hazelnuts for my second serving which added a nice additional
+  texture. I think I will also try some fresh parsley
+- This was really quick and easy for a lazy weeknight meal. I only used
+  half a box of pasta but wish I had used the entire lemon and stick of
+  butter, the sauce turned out so delicious. Don’t worry about finding a
+  Meyer lemon! Those who found this to be bitter, I urge you to retry
+  and make sure to remove every single lemon seed. Will make many times
+  over!
+- Hi! I have a bunch of lemon that have been zested, can i use them for
+  this recipe? Thanks!
+- Echoing Jill from Ontario! This was not at all what I expected. Really
+  bitter and not creamy at all.
+- this recipe was suuuuper bitter. i used normal lemon which i think was
+  the problem, if you make this i would recommend either using a meyer
+  lemon, or if you use regular, maybe add some sugar when caramelizing ?
+- PEFECT marriage of flavors
+- Didn’t turn out great. Next time I’ll play with the timing of the
+  butter browning and adding the lemon to see if I can alter the flavor
+  a bit. Overall, a tangy (and sadly bitter) version of a cacio e pepe.

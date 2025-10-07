@@ -1,0 +1,149 @@
+# Squash and Radicchio Salad With Pecans
+Christina Chaey and Claire Saffitz
+2025-10-07
+
+## Blurb
+
+This squash-centric salad has an irresistible pecan dressing and hardy
+radicchio that refuses to wilt. The palm-size 898 squash, a new cousin
+of the beloved honeynut developed by vegetable breeder–mad genius
+Michael Mazourek, tastes like a turbocharged butternut. It’s now rolling
+out at farmers’ markets, select grocery stores, and online grocers
+across the country. Preheating the baking sheet will help the squash
+sizzle and sear as soon as it hits the pan rather than steam and stick.
+See all of the Absolutely, Positively Perfect Thanksgiving recipes here.
+
+## Ingredients
+
+- 6 898, honeynut, or delicata squash, halved, seeds removed, sliced
+  into 1”-thick half-moons
+- ¼ cup extra-virgin olive oil
+- Kosher salt, freshly ground pepper
+- 1 cup pecans
+- 1 tsp. plus ½ cup extra-virgin olive oil; plus more for drizzling
+- Kosher salt
+- ½ small shallot, finely chopped
+- ¼ cup plus 1 Tbsp. fresh lemon juice
+- 2 Tbsp. fresh orange juice
+- 2 Tbsp. Dijon mustard
+- 4 tsp. pure maple syrup
+- Freshly ground black pepper
+- 2 small heads of radicchio, leaves separated, torn if large
+- ½ medium Asian pear, thinly sliced
+- 3 oz. Piave cheese or Parmesan, shaved
+- ¼ cup parsley leaves
+- ½ lemon
+
+## Instructions
+
+1.  Place racks in middle and lower third of oven and set a rimmed
+    baking sheet on each; preheat oven to 450°. Toss squash with oil in
+    a large bowl; season with salt and pepper. Remove baking sheets from
+    oven and divide squash between them, arranging in a single layer.
+    Roast, rotating sheets halfway through, until browned and tender,
+    15–25 minutes. Set squash aside; reduce oven temperature to 350°.
+2.  Do Ahead: Squash can be roasted 1 day ahead. Let cool, then transfer
+    to an airtight container. Cover and chill. Bring to room temperature
+    or heat slightly in a microwave before using.
+3.  Toss pecans with 1 tsp. oil in a small bowl; season with salt. Toast
+    on a rimmed baking sheet, tossing halfway through, until slightly
+    darkened and fragrant, 8–10 minutes. Let cool, then coarsely chop.
+    Set ½ cup pecans aside for serving.
+4.  Blend shallot, orange juice, mustard, maple syrup, ¼ cup lemon
+    juice, and remaining pecans in a blender until mostly smooth. With
+    motor running, gradually stream in ½ cup oil and blend until
+    emulsified and smooth. Season dressing with salt and pepper.
+5.  Toss radicchio and half of dressing in a large bowl to coat; season
+    with salt and pepper. Arrange on a platter. Toss reserved squash
+    with remaining dressing in the same bowl to coat; season with salt
+    and pepper. Arrange over radicchio.
+6.  Toss Asian pear with 1 Tbsp. lemon juice in a small bowl. Top salad
+    with Asian pear, cheese, parsley, and reserved pecans. Squeeze juice
+    from lemon half over and drizzle with oil; season with more salt and
+    pepper.
+7.  Do Ahead: Vinaigrette can be made 1 day ahead. Cover and chill.
+    Bring to room temperature before using.
+
+## End-blurb
+
+## Comments
+
+- This recipe features a vinaigrette that I love to use. It’s awesome
+- I tried this recipe but I couldn’t find radicchio anywhere. I made the
+  salad with arugula instead and would 100% recommend this veggie if you
+  cant find radicchio either. Very good recipe and easy to follow.
+- I’m not sure if this review will make it. But I am so tired of reading
+  reviews of recipes that don’t follow the recipe or use the
+  ingredients. Then, giving it a bad rating. What’s next, a vegan
+  reviewing a recipe for steak au poivre, subbing tofu, then complaining
+  the dish was bland derp 2 stars.
+- Soaking the radicchio leaves in Icy water for a few hours will take
+  away the bitterness. The recipe could use some weights and measures.
+- Made this salad four times now! and it never fails to impress!
+- This is a very good salad and visually stunning. I added some fun leaf
+  lettuces to break up the bitter from the radicchio and it made it even
+  prettier. I also added mint, which was bomb.
+- The dressing for this is MONEY. It should be bottled for sure. The
+  radicchio is too bitter for my liking. The squash is good. All the
+  toppings are good. I’d love to make it again but the radicchio has got
+  to go. There has to be another leafy veg that could work for this.
+- I made this for thanksgiving this year! It made A LOT of salad -
+  absolutely filled up a large platter. The majority of feedback I
+  received was that it was “beautiful” - which is nice to hear, and I
+  agreed! I found the radicchio to be a little bitter for my tastes, but
+  it was a nice contrast to all the creamy, umami bombs of thanksgiving.
+  There’s really no way to get an 898 squash, as far as Google and I
+  could tell - so I used some delicata and some butternut, cubed up. The
+  different colors (yellow and orange respectively) were very pretty and
+  they tasted wonderful - but I wish there was some way to quantify how
+  much should be used (oz or lbs would work!)? I might try this again
+  for a dinner party - it HAS inspired me to look at radicchio and
+  winter squash in salads, which is a nice change!
+- I was very excited to try making this salad after watching the new
+  Making Perfect series! Right off the bat I need to say that this
+  review is not 100% accurate to the original recipe because I could not
+  find 898 or honeynut squash, Piave, or radicchio. I used delicata
+  squash, Parmesan cheese, and a mix of shredded cabbage, broccoli, and
+  brussel sprouts instead. I also wanted to make salads as lunch salads
+  instead of a side, so I added in some shrimp to make it more of a
+  meal. I hadn’t used delicata squash before and they were….okay. I
+  thought they were pretty bland for what is supposed to be a
+  squash-centric salad. I wish the recipe had said how much salt and
+  pepper to add, since you can’t exactly taste and adjust the seasoning
+  on raw squash, so mine were bland when they came out of the oven, but
+  once I added more salt and pepper they tasted okay. They did get brown
+  on the bottoms, especially the squash on the lower oven shelf. The
+  dressing was very tasty if a little thick and labor intensive. When
+  eating the final salad, I thought the Parmesan got lost with all of
+  the other flavors. I even added more partway through eating it, but I
+  still didn’t notice it. Maybe Piave brings more to the party. Overall,
+  the salad was pretty tasty, but I’m not sure if it’s worth all the
+  work to make it again. I’m also disappointed that I couldn’t find
+  three of the ingredients in an average grocery store. If I could find
+  them, I might try making the salad again. I made salads in the past
+  with roasted butternut squash and brussel sprouts, feta, shredded
+  chicken, walnuts, pomegranate seeds, and a pomegranate vinaigrette
+  which I thought were more tasty and less work, so I would probably
+  make that instead if I were craving a squash salad.
+- Made this recently and really enjoyed it, the dressing in particular
+  was very tasty - thick, so you do benefit from dressing the leaves and
+  the squash separately. I think you’d crush everything otherwise. The
+  one thing though - I did NOT like the skin left on the squash. It was
+  noticeably present even after roasting for a good long time, and
+  everyone ended up just sort of scraping the squash out of the skin and
+  eating it that way instead (and I used the prescribed honeynut, not
+  delicata) Next time I’d definitely remove it and roast without.
+- Can anyone tell me the approximate weight of the delicate squash for
+  this salad? I am finding that they vary and “6” is throwing me off.
+  Thanks.
+- This is a great dish–crisp, bright autumn flavors. My only issue was
+  the dressing comes out very thick because of pecans ground into the
+  emulsion. This makes the dressing difficult to mix into vegetables.
+  You can thin with oil or water, but then need to season it again
+  because that dilutes the flavor.
+- Sorry if this is an unfathomly dumb question but are you supposed to
+  leave the skin on and eat it? I roasted some honeynuts and found the
+  skin quite tough! Or is the skin just for presentation?
+- Made this salad this past weekend and it was a HIT!!!! Beyond
+  delicious! and that pecan dressing, was the boooomb!! Thank you for
+  sharing!

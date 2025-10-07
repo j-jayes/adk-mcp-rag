@@ -6,7 +6,9 @@ from qdrant_client.http.models import Distance, VectorParams, SparseVectorParams
 
 # Initialize the vector store
 class VectorDB(BaseModel):
-    memory_location: str = "localhost"
+    # Use an explicit URL including port so it's clear where we'll connect.
+    # Default to the common local Qdrant port used by the project.
+    memory_location: str = "http://localhost:6333"
     embeddings_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
     sparse_embeddings_model_name: str = "Qdrant/bm25"
     collection_name: str = "default_collection"
@@ -23,12 +25,29 @@ class VectorDB(BaseModel):
 
     def _initialize_client(self):
         """Initialize the Qdrant client and set up the collection"""
-        # First, create the client
-        self.client = QdrantClient(self.memory_location)  # For production using url and port
-        
-        # Set the models - this is needed for automatic collection creation to work
-        self.client.set_model(self.embeddings_model_name)
-        self.client.set_sparse_model(self.sparse_embeddings_model_name)
+        # First, create the client. Use the explicit `url=` kwarg so it's obvious
+        # we're connecting to an HTTP endpoint (including port).
+        try:
+            self.client = QdrantClient(url=self.memory_location)
+
+            # Set the models - this is needed for automatic collection creation to work
+            self.client.set_model(self.embeddings_model_name)
+            self.client.set_sparse_model(self.sparse_embeddings_model_name)
+        except Exception as e:
+            # Provide an actionable error message so users can quickly diagnose
+            # common causes (server not running or wrong host/port).
+            print(
+                f"Error initializing Qdrant client: {e}\n"
+                f"Make sure the Qdrant MCP server is running and reachable at '{self.memory_location}'.\n"
+                "If you're running via Docker Compose, from the project root try:\n"
+                "  docker compose -f docker/docker-compose.yml up -d\n"
+                "Or on older systems: docker-compose -f docker/docker-compose.yml up -d\n"
+                "On Windows PowerShell you can also test connectivity with:\n"
+                "  Test-NetConnection -ComputerName localhost -Port 6333\n"
+                "or use: Invoke-WebRequest -Uri http://localhost:6333 -UseBasicParsing\n"
+            )
+            # Keep client as None so callers can handle the empty state.
+            self.client = None
         
     def check_collection_existence(self):
         """Check if the collection exists in the vector database"""

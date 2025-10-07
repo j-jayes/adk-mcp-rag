@@ -1,0 +1,220 @@
+# Brown Butter and Toffee Chocolate Chip Cookies
+Kate Davis
+2025-10-07
+
+## Blurb
+
+Using chocolate wafers instead of chips is a cookie game-changer. They
+spread as they melt, creating thin pockets of chocolate in each layer,
+and stay much softer at room temperature.
+
+## Ingredients
+
+- 1 cup (2 sticks; 227 g) unsalted butter
+- 2 cups (250 g) all-purpose flour
+- 1 teaspoon baking soda
+- ¾ teaspoon kosher salt
+- 1 cup (packed; 215 g) dark brown sugar
+- ⅓ cup (73 g) granulated sugar
+- 2 large eggs, room temperature
+- 2 teaspoons vanilla extract
+- 2 1.4-oz. (80 g total) chocolate toffee bars (preferably Skor),
+  chopped into ¼-inch pieces
+- 1½ cups (216 g) chocolate wafers (disks, pistoles, fèves; preferably
+  72% cacao)
+- Flaky sea salt
+
+## Instructions
+
+1.  Cook butter in a medium saucepan over medium heat, stirring often,
+    until it foams, then browns, 5–8 minutes. Scrape into a large bowl
+    and let cool slightly., about 10 minutes (an instant-read
+    thermometer should register 125°).
+2.  Meanwhile, whisk flour, baking soda, and kosher salt in a medium
+    bowl.
+3.  Add brown sugar and granulated sugar to browned butter. Using an
+    electric mixer on medium speed, beat until incorporated, about 1
+    minute. Add eggs and vanilla, increase mixer speed to medium-high,
+    and beat until mixture lightens and begins to thicken, about 1
+    minute. Reduce mixer speed to low; add dry ingredients and beat just
+    to combine. Mix in toffee pieces and chocolate wafers with a wooden
+    spoon or rubber spatula. Let dough sit at room temperature at least
+    30 minutes to allow flour to hydrate. Dough will look very loose at
+    first, but will thicken as it sits.
+4.  Place a rack in middle of oven; preheat to 375°. Using a 1-oz. ice
+    cream scoop, portion out balls of dough and place on a
+    parchment-lined baking sheet, spacing about 3” apart (you can also
+    form dough into ping pong–sized balls with your hands). Do not
+    flatten; cookies will spread as they bake. Sprinkle with sea salt.
+5.  Bake cookies until edges are golden brown and firm but centers are
+    still soft, 9–11 minutes. Let cool on baking sheets 10 minutes, then
+    transfer to a wire rack and let cool completely. Repeat with
+    remaining dough and a fresh parchment-lined cooled baking sheet.
+6.  Do Ahead: Cookie dough can be made 3 days ahead; cover and chill.
+    Let dough come to room temperature before baking.
+
+## End-blurb
+
+## Comments
+
+- I just love the taste and texture of these cookies. (We skip the
+  toffee and only use chocolate chips)Our cookies never flatten out like
+  they are supposed to, what would be the reason for that?
+- These cookies have been my go-to comfort food during the pandemic.
+  They’re phenomenal; the brown butter makes a huge difference and using
+  good quality chocolate wafers is so worth it. I always freeze most of
+  the dough into portioned balls; that way, you can just bake a few at a
+  time, and have awesome cookies whenever the need strikes.
+- These rule. In my long and illustrious career I haven’t done much
+  baking but these RULE
+- Flat flat flat flatter than pancakes!?!? HELP! I followed all the
+  instructions, every piece on ingredient….what could have made my
+  cookies turn out like a pancake that flattened out the the size of my
+  hand?!? An troubleshooting advice out there?
+- I’ve tried so many recipes in my life, and this one has to be my all
+  time favorite. I dont need to make any substitutions. It’s just
+  perfect. I make these ahead of time and freeze them for when i don’t
+  have time or energy to make a dessert. I’ll make a few dozen and no
+  cookie is ever left unclaimed when I set them out for loved ones. When
+  I defrost them, I leave them on the kitchen counter uncovered for 30
+  minutes. They bake beautifully with the crispy edges and chewy center!
+- I loved it! This was the best recipe ever but could you also include
+  how to make the toffee because I didn’t have any at hand and had to
+  omit it but was still AWESOME! Also, this is much better and less time
+  consuming than the Tasty one.
+- Love the detailed description, made it that much easier to get it
+  right, my family loved it ! These cookies were so yum that they paired
+  very well with vanilla ice cream too !!
+- These are the best cookies I’ve ever made. Every single person who’s
+  tried them loves them. I’ve also used the same base and added
+  different mix-ins and it’s always delicious. I’ve stopped making any
+  other chocolate chip cookies because these are simply show stoppers
+- I no longer have use for regular chocolate chip cookies in my life.
+  These are OUTSTANDING! A huge payoff for a relatively easy recipe.
+  Subbed 70% choc chips & Heath bits o’ brickle (bagged heath pieces
+  without choc) because it’s what I had on hand. The browned butter took
+  at least 20+ minutes to cool to 125 so just be mindful. If you have
+  flaky sea salt on hand DO NOT skip that step, really pushes it over
+  the edge. Will be making this on repeat for friends. Thanks BA!
+- I cannot believe how perfect these turned out using Gluten Free AP
+  (Pamela’s). “I would have had no idea this wasn’t a normal cookie. I’d
+  run a mile for one of these.” are the words that my husband just spoke
+  after I had him try one of these when I subbed in GF All Purpose
+  Flour! And he pretty decidedly stays away from my gluten-free things.
+  This is going to be our new go-to cookie recipe as it has both sides
+  of the gluten-free divide VERY happy. I weighed my cookies out by 1oz
+  and got 41 cookies (although I also went a little heavier on both
+  chips than the recipe called for). Never browned butter for cookies
+  before and it is SO worth it.
+- I’ve made this recipe probably 5 or 6 times now; it’s become my go-to
+  chocolate chip cookie recipe. Some tips I’ve found thru trial and
+  error: -try not to stir the butter while it’s browning -the butter
+  foams up when it’s getting close to done, which makes it hard to see
+  what color it is.. I find it’s best to just do it by smell -brown
+  butter forms little bits at the bottom.. that’s fine, they’re little
+  caramels! -don’t skip or skimp on the creaming butter and sugar phase!
+  Some notes: -I find a noticeable difference in the outcome when I let
+  the batter sit for 30 minutes as recommended vs when I don’t.. letting
+  it sit and hydrate results in a fluffier and lighter cookie, whereas
+  baking it immediately results in a thinner more chewy cookie -the
+  dough can of course be refrigerated, but it seems to lose some of the
+  lovely brown butter flavor when it’s been saved -I almost always add
+  pecans or walnuts, and that’s obviously delicious and works well
+  -sometimes I add cinnamon or even cayenne, which is great
+- These cookies are insanely good - I have made this recipe about once a
+  month for the last six months and each time they have turned out
+  delicious! I highly recommend this recipe, it will be my go to for a
+  sweet treat for years to come :-)
+- These cookies are insanely good - I have made this recipe about once a
+  month for the last six months and each time they have turned out
+  delicious! I highly recommend this recipe, it will be my go to for a
+  sweet treat for years to come :-)
+- These are the best chocolate chip cookies I’ve ever made and/or eaten.
+  I’ve made them so many times since I stumbled onto this recipe. My
+  friends, neighbors and family thank you.
+- These cookies are DELICIOUS. Absolutely delicious. Big hit with
+  everyone in my house, and I sent the recipe to my parents and they’re
+  now my father’s favorite, too. I would even increase the ratio of
+  toffee bits to chocolate; that’s literally the only thing I’d do
+  differently, but it’s because I just really love toffee.
+- I have made these cookies several times. They are my favorite, and
+  numerous people I’ve baked them for have told me, “this is the best
+  chocolate chip cookie I’ve ever had”- including my grandma, whose
+  cookies were my favorite growing up! I use heath bits, and a few more
+  grams of high quality dark chocolate than the recipe calls for. The
+  first couple times, they came out a bit cakey (while still having
+  excellent flavor). The third time, and every time since, I’ve done two
+  things differently: measured by weight instead of cups, and pulled the
+  baking sheet out mid-bake to give it a solid whack and knock down the
+  cookies. I’m not sure which technique (or both) did the trick, but
+  they now turn out PERFECTLY every time! Wide flat cookies, crispy at
+  the edges and chewy at the centers; with the slight salty tang of the
+  flaky sea salt melding perfectly with the caramelized notes from the
+  browned butter and toffee. Mmmmmmm. Can’t wait to make them again!
+- Listen, I’m not playing around: these are the best cookies I have ever
+  made in my life. There is no better cookie. The end.
+- Yes, these are the bomb. Dangerously so. I used 63% discs from KAF.
+  Skor bits. I got 26 1.5 ounce cookies. One sheet at a time on middle
+  rack. 6 per sheet. Baked 4 mins, rotated 3 mins, then dropped cookie
+  sheet on stove top to deflate, cooked 2-3 mins more. Worked great.
+  They must leave my house immediately.
+- This is my go to cookie recipe, the toffee really goes so well with
+  the brown butter. I used dark chocolate wafers from ghirardelli, I do
+  not like bittersweet chocolate. Now with PUFFY cookies…I’ve made this
+  recipe several times already and never knew why they were puffy until
+  recently. People have suggested to use baking soda instead of powder
+  (recipe calls for soda so use soda). Eggs must be at room temp…didn’t
+  make a difference to me. Batter should not be over mixed…I’ve mixed
+  this with a hand held mixer for 10 mins to get that thick consistency
+  and pale color, I also mixed it with a spatula and got it to a dark
+  caramel color and loose consistency. All of this did not really have
+  an effect. BUTTT when you’re scooping out the dough, do not roll into
+  a ball and compact it together, just scoop and place on the tray. The
+  denser you pack the dough, the more puffy they’ll get. Also, it
+  depends on your oven. I place two trays in my oven, top and bottom
+  rack. The top rack, the cookies came out nice and thin, crispy and
+  chewy, they were perfect. Bottom rack, they did not spread out as
+  much. The high heat really helps with the spread of the cookie as
+  well. So just keep those two factors in mind. Either way, puffy or not
+  they’re still delicious.
+- This was an exceptional recipe! I have made it about 10 times. The
+  last few times I made it, the cookies puffed and didn’t spread. I just
+  made another batch and they did spread like the original recipe. The
+  difference between these batches was cooking by weight. When I cooked
+  by weight, they turned out better. When I didn’t, and cooked the
+  conventional way by cup etc, that is when they puffed up. Hopefully
+  this helps! Keep on trying! They taste good either way.
+- Love these cookies! Didn’t have access to toffee bars but had
+  sweetened condensed milk I wasn’t going to use at home so made some
+  condensed milk toffee which beautifully complimented the cookie. I
+  live in a warmer climate and when I baked the cookies straight from
+  making the dough I got beautiful spread but the next day from baking
+  the cooled dough from the refrigerator they were puffier and more cake
+  like. So for those with the puffy cookie recipe make sure to bake your
+  dough from room temp.
+- While this recipe might be “easier” that Chris’s recipe (which has
+  more intricate steps to achieve that ‘perfect’ cookie), Rick’a cookie
+  really seems to take the cake for the most flavorful cookie of them
+  all. I am so impressed! The toffee Is Definetly incredible here but if
+  you don’t like it I’m sure you could leave it out and use just a
+  little more chocolate.
+- Made these a second time and I think I have a suggestion re: puffy
+  cookies. If you watch the video Rick uses a stand up mixer to combine
+  the flour. Don’t do this unless you have a stand up, my hand mixer is
+  way too powerful, even on the lowest setting so combine the flour with
+  a spatula Instead, in the poofy cookies the flour has been overworked.
+  Tried these with just toffee chips (100g as someone suggested) and I’d
+  say it almost worked better than with the skor bar bits.
+- These are incredible!! If you don’t have access to Skor bars, Rick
+  posted a Skor bar recipe to his instagram a while ago, and they’re so
+  so amazing! Sprinkle 1/2 chopped almonds in a parchment lined pan, and
+  in a sauce pan boil 1 cup butter, 1 cup sugar, and 1/4 cup water to
+  312 F, 15 min until medium amber! Then remove from heat and add 2
+  teaspoons vanilla. Lastly pour it into pan over the almonds and let
+  sit for 5 minutes, then sprinkle 1 cup chopped milk chocolate and let
+  melt and spread. Let it cool completely, and cut into pieces! This
+  makes enough for at least 4 batches.
+- THE MOST AMAZING TOFFEE-FILLED, CHOCOLATELY, BROWN BUTTERY GOODNESS!
+  Will definitely make again and again. You can also chop your own dark
+  chocolate into chunks instead of using buttons, but the Skor bits is a
+  must have!
