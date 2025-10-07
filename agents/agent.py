@@ -10,6 +10,10 @@ from google.adk.models.lite_llm import LiteLlm
 
 from .tools import PromptLoader, MCPTools
 
+# Modifying here to try with agent tools.
+from google.adk.tools.agent_tool import AgentTool
+
+
 # Load environment variables from .env file in the parent directory
 load_dotenv('./docker/.env', override=True)
 
