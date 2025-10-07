@@ -1,0 +1,11 @@
+---
+title: Recipes
+listing:
+    contents: "recipes/*"
+    type: default
+    sort: "title"
+    filter-ui: true
+    sort-ui: true
+    categories: true
+    fields: [title, categories]
+---

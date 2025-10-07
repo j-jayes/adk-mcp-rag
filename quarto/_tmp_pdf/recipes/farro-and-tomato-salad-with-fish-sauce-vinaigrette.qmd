@@ -1,0 +1,86 @@
+---
+title: "Farro and Tomato Salad with Fish-Sauce Vinaigrette"
+date: 2025-10-07T10:23:49
+draft: false
+slug: farro-and-tomato-salad-with-fish-sauce-vinaigrette
+tags:
+  - Farro
+  - "Rice & Grains"
+  - Cherry Tomato
+  - Tomato
+  - Vegetable
+  - Summer
+  - Easy
+  - Side
+  - "Dairy-Free"
+  - "Nut-Free"
+  - Healthyish
+  - Fry
+categories:
+  - Salad
+servings: 4 Servings
+---
+## Blurb
+
+Salty, crunchy, and herbaceous—a perfect side dish for grilled meats or fish.
+
+## Ingredients
+
+- 1 garlic clove, grated
+- 3 tablespoons fish sauce (such as nam pla or nuoc nam)
+- 2 tablespoons white wine vinegar
+- 1 tablespoon sugar
+- 1 cup semi-pearled farro
+- Kosher salt
+- 1 tablespoon olive oil
+- 1 bunch scallions, trimmed
+- 8 ounces small tomatoes, preferably heirloom, cut into ½-inch wedges
+- 8 ounces cherry and/or pear tomatoes, halved
+- 2 Persian cucumbers, thinly sliced
+- ½ cup parsley leaves
+- ½ cup tarragon leaves
+- Freshly ground black pepper
+
+## Instructions
+
+1. Whisk garlic, fish sauce, vinegar, sugar, and 1 Tbsp. water in a small bowl until sugar dissolves.
+2. Do Ahead: Vinaigrette can be made 1 week ahead. Cover and chill.
+3. Cook farro in a medium pot of boiling salted water, stirring occasionally, until tender, 20–25 minutes. Drain; transfer to a large bowl.
+4. Heat oil in a large skillet over medium-high. Cook scallions, turning occasionally, until charred all over, about 4 minutes. Transfer to bowl with farro. Add both types of tomatoes, cucumbers, parsley, and tarragon and toss to combine. Add vinaigrette and toss again to coat; season with pepper.
+
+## End-blurb
+
+
+
+## Comments
+
+- I think Yum! Some charred corn is a nice addition as well!
+- Wow this is really greater then the sun of its parts. I sprinkled peanuts on it and a fried egg and made a meal of it and it was SO GOOD.
+- New Summer Staple I made this for a party a few weeks back. It was such a hit that I've had several requests for the recipe, and have made it for three other parties. I've made it so many times that I have it memorized.
+- Tis was very nice and delicious, the flavours really meshed well together
+
+
+## Metadata (YAML)
+
+```yaml
+title: "Farro and Tomato Salad with Fish-Sauce Vinaigrette"
+date: 2025-10-07T10:23:49
+draft: false
+slug: farro-and-tomato-salad-with-fish-sauce-vinaigrette
+tags:
+  - Farro
+  - "Rice & Grains"
+  - Cherry Tomato
+  - Tomato
+  - Vegetable
+  - Summer
+  - Easy
+  - Side
+  - "Dairy-Free"
+  - "Nut-Free"
+  - Healthyish
+  - Fry
+categories:
+  - Salad
+servings: 4 Servings
+```
