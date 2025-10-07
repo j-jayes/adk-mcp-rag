@@ -1,0 +1,50 @@
+{
+  "index.qmd": {
+    "index.html": "9e698522"
+  },
+  "recipes/bas-best-baked-ziti.qmd": {
+    "bas-best-baked-ziti.html": "c7b62535"
+  },
+  "recipes/bas-best-bolognese.qmd": {
+    "bas-best-bolognese.html": "a6c22473"
+  },
+  "recipes/bas-best-coconut-cream-pie.qmd": {
+    "bas-best-coconut-cream-pie.html": "4e7769fe"
+  },
+  "recipes/bas-best-lasagna.qmd": {
+    "bas-best-lasagna.html": "4780914f"
+  },
+  "recipes/broccoli-caesar.qmd": {
+    "broccoli-caesar.html": "ab4a3ab5"
+  },
+  "recipes/brown-butter-and-toffee-chocolate-chip-cookies.qmd": {
+    "brown-butter-and-toffee-chocolate-chip-cookies.html": "59587e85"
+  },
+  "recipes/crispy-sheet-pan-meatballs-with-salsa-verde.qmd": {
+    "crispy-sheet-pan-meatballs-with-salsa-verde.html": "22fe518b"
+  },
+  "recipes/farro-and-tomato-salad-with-fish-sauce-vinaigrette.qmd": {
+    "farro-and-tomato-salad-with-fish-sauce-vinaigrette.html": "e53bc44b"
+  },
+  "recipes/mushroom-carbonara.qmd": {
+    "mushroom-carbonara.html": "a6c9edf8"
+  },
+  "recipes/no-fail-roast-chicken-with-lemon-and-garlic.qmd": {
+    "no-fail-roast-chicken-with-lemon-and-garlic.html": "d80f0f76"
+  },
+  "recipes/olive-oil-cake.qmd": {
+    "olive-oil-cake.html": "291a48c6"
+  },
+  "recipes/one-skillet-chicken-with-buttery-orzo.qmd": {
+    "one-skillet-chicken-with-buttery-orzo.html": "53a5c876"
+  },
+  "recipes/pasta-with-brown-butter-whole-lemon-and-parmesan.qmd": {
+    "pasta-with-brown-butter-whole-lemon-and-parmesan.html": "261ab768"
+  },
+  "recipes/slow-roast-gochujang-chicken.qmd": {
+    "slow-roast-gochujang-chicken.html": "2f3fdf56"
+  },
+  "recipes/squash-and-radicchio-salad-with-pecans.qmd": {
+    "squash-and-radicchio-salad-with-pecans.html": "60507ab9"
+  }
+}

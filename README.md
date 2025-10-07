@@ -28,6 +28,74 @@ This project implements a Retrieval-Augmented Generation (RAG) system that combi
 - **Context Augmentation**: Enhances LLM responses with relevant retrieved information
 - **Monitoring & Logging**: Comprehensive tracking of system performance
 
+## What changed for the Recipe Bot (my modifications)
+
+This fork adapts the base RAG template into a recipe-focused assistant, adds a unit-conversion sub-agent, and wires in Quarto-sourced recipe data.
+
+### 1) Unit Conversion Sub‑Agent
+
+- New sub-agent: `agents/sub_agents/unit_conversion/`
+	- `agent.py` creates a lightweight `google.adk.Agent` named `unit_conversion_agent` using model `gemini-2.0-flash`.
+	- `prompt.py` defines `UNIT_CONVERSION_PROMPT` with detailed, kitchen-appropriate conversions (cups/tbsp/tsp/oz, ranges, qualifiers, edge cases).
+	- `__init__.py` exports `unit_conversion_agent`.
+- Integration into the root agent: `agents/agent.py`
+	- The main RAG agent is created via `google.adk.agents.llm_agent.LlmAgent` and now includes the sub-agent as a tool using `google.adk.tools.agent_tool.AgentTool`:
+		- `tools=[toolset, AgentTool(agent=unit_conversion_agent)]`
+	- This allows the root agent to delegate measurement conversions to the dedicated sub-agent when needed.
+
+### 2) Recipe‑Focused System Prompt
+
+- Prompt config: `agents/config/prompts.yml`
+	- The `ask_rag_agent.instruction_prompt` is rewritten to make the assistant an expert culinary assistant trained on a recipe corpus.
+	- It instructs the agent to use the retrieval tool for cooking/baking questions, provide clear answers with citations, and to use the `unit_conversion` tool for measurement conversions.
+- Prompt loading: `agents/tools/prompts.py`
+	- `PromptLoader` reads `agents/config/prompts.yml`; `agents/agent.py` uses this to set the root agent’s `instruction`.
+
+### 3) Quarto → Data → Vector Store Workflow
+
+- Quarto project lives under `quarto/` with recipes in `quarto/recipes/*.qmd`.
+- Render and export PDFs with embedded metadata, then copy into `data/`:
+	- Script: `src/01-render_recipes_and_copy_pdf.py`
+		- Renders the Quarto site to HTML (`quarto/_site`).
+		- Creates augmented temporary `.qmd` files that include the YAML front matter as a visible code block so metadata is preserved in PDF text.
+		- Renders per-file PDFs into `quarto/_pdf/**` and copies them to `data/**` (preserving folder structure).
+- Ingestion into the local vector store:
+	- Script: `local_vector_store/prepare_corpus_and_data_locally.py`
+		- Loads `data/*/*.md` and all PDFs in `data/` using LangChain loaders.
+		- Splits into chunks (size 800, overlap 400) and assigns stable chunk IDs (`<source>:<page>:<idx>`).
+		- Inserts only new chunks into Qdrant to avoid duplicates.
+	- Vector DB helper: `local_vector_store/vector_db.py`
+		- Wraps a `QdrantClient` configured with both dense (`sentence-transformers/all-MiniLM-L6-v2`) and sparse (`Qdrant/bm25`) models.
+		- Uses simplified `client.add()` for embedding + upsert and `client.query()` for retrieval.
+
+### End‑to‑End flow (quick start)
+
+1) Render Quarto content and copy PDFs into `data/`:
+
+	 ```powershell
+	 python .\src\01-render_recipes_and_copy_pdf.py
+	 ```
+
+
+2) Ensure Qdrant MCP is up (see “Build Qdrant and Qdrant MCP” below).
+
+3) Ingest data into the vector store:
+
+	 ```powershell
+	 python .\local_vector_store\prepare_corpus_and_data_locally.py
+	 ```
+
+4) Run the agent:
+
+	 ```powershell
+	 python .\main.py
+	 ```
+
+Notes:
+- The root agent will cite recipe titles when answers use retrieved content.
+- When users ask for measurement conversions, the root agent will route to the unit‑conversion sub‑agent.
+- The MCP SSE endpoint is read from the `QRANT_MCP_SSE` environment variable (see `agents/agent.py`).
+
 ## Installation
 
 Remember to install the [uv](https://docs.astral.sh/uv/getting-started/installation/) first
