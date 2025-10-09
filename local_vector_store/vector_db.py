@@ -1,147 +1,242 @@
-from qdrant_client import QdrantClient
-from pydantic import BaseModel, ConfigDict
-from uuid import uuid4
-from typing import List, Tuple, Optional
-from qdrant_client.http.models import Distance, VectorParams, SparseVectorParams, OptimizersConfigDiff
+from __future__ import annotations
 
-# Initialize the vector store
+from uuid import uuid4
+from typing import List, Optional, Sequence, Dict, Any, Union
+from datetime import datetime
+
+from pydantic import BaseModel, ConfigDict
+from qdrant_client import QdrantClient
+from qdrant_client.http import models as qm
+
+
 class VectorDB(BaseModel):
-    # Use an explicit URL including port so it's clear where we'll connect.
-    # Default to the common local Qdrant port used by the project.
+    """
+    Qdrant-backed vector store (FastEmbed path) with:
+      - add(): hybrid-ready ingestion via client.add(documents=..., metadata=..., ids=...)
+      - query(): dense (and hybrid if sparse model is set) text query
+      - scroll_all(): correct pagination using next_page_offset
+      - ensure_payload_indexes(): create keyword/range indexes for faster filtering
+    """
     memory_location: str = "http://localhost:6333"
     embeddings_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
-    sparse_embeddings_model_name: str = "Qdrant/bm25"
+    sparse_embeddings_model_name: str = "Qdrant/bm25"  # optional hybrid
     collection_name: str = "default_collection"
-    vector_size: int = 384
     client: Optional[QdrantClient] = None
 
-    model_config = ConfigDict(
-        arbitrary_types_allowed=True
-    )
+    model_config = ConfigDict(arbitrary_types_allowed=True)
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self._initialize_client()
 
-    def _initialize_client(self):
-        """Initialize the Qdrant client and set up the collection"""
-        # First, create the client. Use the explicit `url=` kwarg so it's obvious
-        # we're connecting to an HTTP endpoint (including port).
+    # -----------------------------
+    # Client / collection setup
+    # -----------------------------
+    def _initialize_client(self) -> None:
         try:
             self.client = QdrantClient(url=self.memory_location)
-
-            # Set the models - this is needed for automatic collection creation to work
+            # FastEmbed models for add/query
             self.client.set_model(self.embeddings_model_name)
-            self.client.set_sparse_model(self.sparse_embeddings_model_name)
+            # If sparse model available, enables hybrid by default.
+            try:
+                if self.sparse_embeddings_model_name:
+                    self.client.set_sparse_model(self.sparse_embeddings_model_name)
+            except Exception:
+                # Sparse is optional; skip if not supported in your install.
+                pass
         except Exception as e:
-            # Provide an actionable error message so users can quickly diagnose
-            # common causes (server not running or wrong host/port).
             print(
                 f"Error initializing Qdrant client: {e}\n"
-                f"Make sure the Qdrant MCP server is running and reachable at '{self.memory_location}'.\n"
-                "If you're running via Docker Compose, from the project root try:\n"
-                "  docker compose -f docker/docker-compose.yml up -d\n"
-                "Or on older systems: docker-compose -f docker/docker-compose.yml up -d\n"
-                "On Windows PowerShell you can also test connectivity with:\n"
-                "  Test-NetConnection -ComputerName localhost -Port 6333\n"
-                "or use: Invoke-WebRequest -Uri http://localhost:6333 -UseBasicParsing\n"
+                f"Check Qdrant is reachable at '{self.memory_location}'."
             )
-            # Keep client as None so callers can handle the empty state.
             self.client = None
-        
-    def check_collection_existence(self):
-        """Check if the collection exists in the vector database"""
+
+    def check_collection_existence(self) -> bool:
         try:
-            collection_info = self.client.get_collection(collection_name=self.collection_name)
-            return collection_info is not None
+            return bool(self.client.get_collection(self.collection_name))
         except Exception as e:
             print(f"Collection does not exist: {e}")
             return False
-        
-    def get_documents_from_collection(self):
-        """Retrieve documents from the collection of the vector database"""
-        limit = 100  # Set a high number or determine count first
-        offset = 0
-        all_documents = []
 
-        # Get count of points in the collection
-        try:
-            collection_info = self.client.get_collection(collection_name=self.collection_name)
-            total_documents = collection_info.points_count
-            print(f"Total documents in collection: {total_documents}")
-            
-            # Fetch in batches to handle potentially large collections
-            while offset < total_documents:
-                # Using scroll API for retrieving large datasets
-                response = self.client.scroll(
-                    collection_name=self.collection_name,
-                    limit=limit,
-                    offset=offset,
-                    with_payload=True,
-                    with_vectors=False 
-                )
-                
-                # Extract documents from points
-                batch_points = response[0]  # First element contains points
-                
-                for point in batch_points:
-                    # Get content
-                    document_text = point.payload.get("page_content", "")
-                    document_metadata = {k: v for k, v in point.payload.items() if k != "page_content"}
-                    
-                    all_documents.append({
-                        "id": point.id,
-                        "page_content": document_text,
-                        "metadata": document_metadata
-                    })
-                
-                # Update offset for next batch
-                offset += len(batch_points)
-                
-                # If we got fewer documents than the limit, we've reached the end
-                if len(batch_points) < limit:
-                    break
+    # -----------------------------
+    # Ingestion
+    # -----------------------------
+    def add(
+        self,
+        documents: Sequence[str],
+        metadatas: Optional[List[Dict[str, Any]]] = None,
+        ids: Optional[Sequence[Union[str, int]]] = None,
+    ) -> List[Union[str, int]]:
+        """
+        Add chunks to Qdrant using the FastEmbed path.
 
-            print(f"Retrieved {len(all_documents)} documents from Qdrant")
-            return all_documents
-            
-        except Exception as e:
-            print(f"Error retrieving documents: {e}")
+        - We mirror text into BOTH 'document' (Qdrant default) and 'page_content'
+          so downstream consumers that expect either key will work.
+        - You can pass full 'metadatas' per chunk (preferred). If omitted, minimal
+          metadata is created.
+        """
+        if not documents:
+            print("No documents to add.")
             return []
-    
-    def add_to_vectordb(self, documents, source_ids):
-        """Add documents to the vector database"""
-        try:
-            if len(documents) == 0:
-                print("No documents to add")
-                return
-                
-            # Prepare metadata - keep page_content separate as it's expected by Qdrant's add() method
-            metadata = [{"source_id": source_id} for source_id in source_ids]
-            ids = [str(uuid4()) for _ in range(len(documents))]
-            
-            # Use add method which handles embedding and collection creation internally
-            self.client.add(
-                collection_name=self.collection_name,
-                documents=documents,
-                metadata=metadata,
-                ids=ids
-            )
-            print(f"Successfully added {len(documents)} documents to vector database")
-        except Exception as e:
-            print(f"Error adding documents to vector database: {e}")
 
-    def query(self, query_text: str, limit: int = 5, threshold: int = 0.5):
-        """Query from the vector database"""
+        # Prepare IDs
+        if ids is None:
+            ids = [str(uuid4()) for _ in range(len(documents))]
+
+        # Prepare metadata list and mirror page_content
+        now_iso = datetime.utcnow().isoformat() + "Z"
+        md_list: List[Dict[str, Any]] = []
+        if metadatas is None:
+            md_list = [{"ingested_at": now_iso} for _ in range(len(documents))]
+        else:
+            if len(metadatas) != len(documents):
+                raise ValueError("len(metadatas) must match len(documents)")
+            # shallow copy to avoid side effects
+            md_list = [dict(m) if m is not None else {"ingested_at": now_iso} for m in metadatas]
+            for m in md_list:
+                m.setdefault("ingested_at", now_iso)
+
+        # Ensure helpful fields exist and mirror content keys
+        for i, text in enumerate(documents):
+            m = md_list[i]
+            # Stable-ish identifiers if caller didn't set them
+            m.setdefault("chunk_id", m.get("id") or m.get("source_id") or str(uuid4()))
+            m.setdefault("doc_id", m.get("source") or m.get("doc_path") or None)
+            m.setdefault("chunk_index", m.get("chunk_index") or m.get("page", 0))
+            m.setdefault("text_length", len(text))
+            # Mirror into page_content to satisfy non-Qdrant wrappers
+            # Qdrant will also store the text under 'document' automatically.
+            m["page_content"] = text
+
+        # Perform add (embeds + auto collection creation)
         try:
-            # Try the simplified query method first
-            search_result = self.client.query(
+            out_ids = self.client.add(
+                collection_name=self.collection_name,
+                documents=list(documents),
+                metadata=md_list,
+                ids=list(ids),
+            )
+            return out_ids
+        except Exception as e:
+            print(f"Error adding documents: {e}")
+            return []
+
+    # Backwards-compatible wrapper for older call sites
+    def add_to_vectordb(self, documents, source_ids):
+        # Convert source_ids into metadatas and forward to add()
+        metadatas = [{"source_id": sid} for sid in source_ids]
+        return self.add(documents=documents, metadatas=metadatas)
+
+    # -----------------------------
+    # Retrieval
+    # -----------------------------
+    def query(
+        self,
+        query_text: str,
+        limit: int = 5,
+        score_threshold: Optional[float] = None,
+        query_filter: Optional[qm.Filter] = None,
+    ) -> List[Dict[str, Any]]:
+        """
+        Text query using FastEmbed path. If a sparse model is set, Qdrant will
+        fuse dense+sparse (RRF) under the hood.
+
+        Returns a list of dicts with id, score, page_content, and metadata.
+        """
+        try:
+            kwargs: Dict[str, Any] = {"limit": limit}
+            if score_threshold is not None:
+                kwargs["score_threshold"] = score_threshold
+            if query_filter is not None:
+                kwargs["query_filter"] = query_filter
+
+            results = self.client.query(
                 collection_name=self.collection_name,
                 query_text=query_text,
-                limit=limit,
-                score_threshold=threshold
+                **kwargs,
             )
-            return search_result
+
+            normalized = []
+            for r in results:
+                # r.metadata contains payload incl. 'document' (and our 'page_content')
+                payload = dict(r.metadata or {})
+                text = payload.get("page_content") or payload.get("document") or ""
+                normalized.append(
+                    {
+                        "id": r.id,
+                        "score": getattr(r, "score", None),
+                        "page_content": text,
+                        "metadata": payload,
+                    }
+                )
+            return normalized
         except Exception as e:
             print(f"Error using query(): {e}")
             return []
+
+    def scroll_all(self, batch_size: int = 100) -> List[Dict[str, Any]]:
+        """
+        Read the entire collection with proper scrolling.
+
+        Uses the 'next_page_offset' returned by Qdrant, not a naive integer step.
+        """
+        all_docs: List[Dict[str, Any]] = []
+        next_offset: Optional[Union[int, str]] = None
+
+        try:
+            while True:
+                points, next_offset = self.client.scroll(
+                    collection_name=self.collection_name,
+                    limit=batch_size,
+                    offset=next_offset,        # <-- correct paging token
+                    with_payload=True,
+                    with_vectors=False,
+                )
+                if not points:
+                    break
+
+                for p in points:
+                    payload = dict(p.payload or {})
+                    text = payload.get("page_content") or payload.get("document") or ""
+                    meta = {k: v for k, v in payload.items()}
+                    all_docs.append(
+                        {"id": p.id, "page_content": text, "metadata": meta}
+                    )
+
+                if next_offset is None:
+                    break
+
+            return all_docs
+        except Exception as e:
+            print(f"Error retrieving documents: {e}")
+            return []
+
+    # -----------------------------
+    # Indexing helpers (optional)
+    # -----------------------------
+    def ensure_payload_indexes(self) -> None:
+        """
+        Create payload indexes for the most common fields we’ll filter by.
+        Safe to call multiple times; Qdrant will ignore existing indexes.
+        """
+        index_specs = [
+            ("source", "keyword"),
+            ("source_id", "keyword"),
+            ("doc_id", "keyword"),
+            ("chunk_id", "keyword"),
+            ("chunk_index", "integer"),
+            ("page", "integer"),
+            ("ext", "keyword"),
+            ("lang", "keyword"),
+            ("year", "integer"),
+        ]
+        for field_name, schema in index_specs:
+            try:
+                self.client.create_payload_index(
+                    collection_name=self.collection_name,
+                    field_name=field_name,
+                    field_schema=schema,
+                )
+            except Exception:
+                # Ignore "already exists" or unused fields
+                pass

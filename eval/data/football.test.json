@@ -1,0 +1,62 @@
+
+{
+  "eval_set_id": "football",
+  "name": "football",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "caseddbe66",
+      "conversation": [
+        {
+          "invocation_id": "e-967538e0-eece-47c9-9ed6-f7b62212586e",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Hello, do you know anything about football?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "As a culinary assistant, I don't have information about football. I can help you with cooking and baking-related questions, though!\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760001355.522945
+        }
+      ],
+      "session_input": {
+        "app_name": "agents",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1760001370.9915924
+    }
+  ],
+  "creation_timestamp": 1760001364.378907
+}

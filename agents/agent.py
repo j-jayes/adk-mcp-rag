@@ -22,6 +22,10 @@ load_dotenv('./docker/.env', override=True)
 global_root_agent = None
 global_toolset = None
 
+# adding this to work with evals: 
+agent = None
+
+
 class Agents():
     """Manages agents"""
 
@@ -99,6 +103,8 @@ try:
     # Try to get the agent synchronously
     agents = Agents()
     root_agent, toolset = agents.get_rag_agent()
+    # Expose the agent instance at module level for `adk eval`
+    agent = root_agent
 except Exception as e:
     # Log the error but don't crash
     print(f"Error initializing agent: {e}")

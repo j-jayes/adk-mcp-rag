@@ -238,12 +238,6 @@ adk-mcp-rag/
 └── requirements.txt         # Python dependencies
 ```
 
-## Modifications
 
-I have added the following files and directories to the original ADK repo:
-- agents/eval
-
-which contains 
-
-python -m pytest -s -vv `test_eval.py` 
+python -m pytest -s -vv "test_eval.py" 
 

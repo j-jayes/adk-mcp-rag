@@ -1,0 +1,69 @@
+{
+  "eval_set_id": "unit_conversion",
+  "name": "unit_conversion",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "case_1",
+      "conversation": [
+        {
+          "invocation_id": "e-62c48009-bec3-4917-8593-3172d05df435",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Can you convert 3.5 cups all purpose flour to grams?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "3.5 cups of all-purpose flour is equivalent to 420 grams.\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-52cacb70-7430-4fec-acf7-5d10d4e7b6c4",
+                "args": {
+                  "request": "3.5 cups all purpose flour to grams"
+                },
+                "name": "unit_conversion_agent"
+              }
+            ],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760011425.650194
+        }
+      ],
+      "session_input": {
+        "app_name": "agents",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1760011445.7118983
+    }
+  ],
+  "creation_timestamp": 1760011440.0339434
+}

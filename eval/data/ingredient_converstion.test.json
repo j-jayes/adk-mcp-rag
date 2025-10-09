@@ -1,0 +1,69 @@
+{
+  "eval_set_id": "ingredient_converstion",
+  "name": "ingredient_converstion",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "casef6c953",
+      "conversation": [
+        {
+          "invocation_id": "e-c081edfa-4d3a-4437-bb1f-88ed0f208e6b",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Hello, can you convert 3.5 cups all purpose to grams?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "3.5 cups of all-purpose flour is approximately 420 grams.\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-3f519d5d-c9c3-4018-8a81-50006322baf7",
+                "args": {
+                  "request": "3.5 cups all purpose flour to grams"
+                },
+                "name": "unit_conversion_agent"
+              }
+            ],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760002446.802804
+        }
+      ],
+      "session_input": {
+        "app_name": "agents",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1760002494.1644301
+    }
+  ],
+  "creation_timestamp": 1760002490.3067272
+}

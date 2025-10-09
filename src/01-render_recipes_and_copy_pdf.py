@@ -7,6 +7,10 @@ Pipeline:
 2) For each content page (e.g., quarto/recipes/*.qmd):
    - Create a temporary augmented copy that appends the source YAML front matter
      as a visible `yaml` code block in the body (so info is included in the PDF text).
+   - Normalize text in the augmented copy only to improve PDF text extraction:
+       • integer + vulgar fraction → decimal (e.g., 3½ → 3.5)
+       • standalone vulgar fraction → ASCII (e.g., ½ → 1/2)
+       • normalize dashes, NBSP, quotes, fraction slash
    - Render that temp file to PDF into quarto/_pdf/<subdir>/.
      (We render each file with `cwd=out_dir` and `--output <name>.pdf`.)
 3) Copy PDFs from quarto/_pdf/** into data/**, preserving folder structure.
@@ -67,23 +71,142 @@ def split_front_matter(text: str):
     body_text = text[m.end():]
     return yaml_text, body_text
 
+# --- Normalization rules for PDF text extraction ---
+# Standalone ASCII replacements for vulgar fractions
+_VULGAR_TO_ASCII = {
+    "¼": "1/4",
+    "½": "1/2",
+    "¾": "3/4",
+    "⅐": "1/7",
+    "⅑": "1/9",
+    "⅒": "1/10",
+    "⅓": "1/3",
+    "⅔": "2/3",
+    "⅕": "1/5",
+    "⅖": "2/5",
+    "⅗": "3/5",
+    "⅘": "4/5",
+    "⅙": "1/6",
+    "⅚": "5/6",
+    "⅛": "1/8",
+    "⅜": "3/8",
+    "⅝": "5/8",
+    "⅞": "7/8",
+}
+
+# When a vulgar fraction directly follows an integer, convert to decimal part
+# Use readable decimals; exact where finite, otherwise common rounded approximations.
+_VULGAR_TO_DECIMAL_PART = {
+    "¼": ".25",
+    "½": ".5",
+    "¾": ".75",
+    "⅐": ".14",   # ~.142857
+    "⅑": ".11",   # ~.111...
+    "⅒": ".1",
+    "⅓": ".33",
+    "⅔": ".67",
+    "⅕": ".2",
+    "⅖": ".4",
+    "⅗": ".6",
+    "⅘": ".8",
+    "⅙": ".17",
+    "⅚": ".83",
+    "⅛": ".125",
+    "⅜": ".375",
+    "⅝": ".625",
+    "⅞": ".875",
+}
+
+_VFRACS_CLASS = "".join(map(re.escape, _VULGAR_TO_ASCII.keys()))
+# Match an integer followed (optionally with a space) by a vulgar fraction
+_RE_INT_VFRAC = re.compile(rf"(?P<int>\d+)\s*(?P<vfrac>[{_VFRACS_CLASS}])")
+
+def _replace_int_vfrac_with_decimal(m: re.Match) -> str:
+    v = m.group("vfrac")
+    dec = _VULGAR_TO_DECIMAL_PART.get(v)
+    if dec is None:
+        # Fallback: leave as integer + ASCII fraction with a space
+        return f"{m.group('int')} {_VULGAR_TO_ASCII.get(v, '')}"
+    # Avoid things like "3.50" -> keep as "3.5" by not adding trailing zeros beyond mapping
+    return f"{m.group('int')}{dec}"
+
+def normalize_text_for_pdf(text: str) -> str:
+    """
+    Normalize text to ASCII-friendly forms for robust PDF text extraction:
+    - integer + vulgar fraction → decimal (3½ → 3.5)
+    - standalone vulgar fraction → ASCII (½ → 1/2)
+    - fraction slash: ⁄ → /
+    - dashes: –, — → -
+    - NBSP/narrow NBSP → space; remove zero-width characters
+    - smart quotes → straight; ellipsis → ...
+    """
+    if not text:
+        return text
+
+    # Normalize spaces and remove zero-widths
+    text = (
+        text.replace("\u00A0", " ")  # NBSP
+            .replace("\u202F", " ")  # narrow NBSP
+            .replace("\u2009", " ")  # thin space
+            .replace("\u200A", " ")  # hair space
+            .replace("\u200B", "")   # zero-width space
+            .replace("\uFEFF", "")   # BOM / zero-width no-break space
+    )
+
+    # Fraction slash
+    text = text.replace("\u2044", "/")
+
+    # Integer + vulgar fraction → decimal (3½ → 3.5)
+    text = _RE_INT_VFRAC.sub(_replace_int_vfrac_with_decimal, text)
+
+    # Replace remaining standalone vulgar fractions with ASCII (½ → 1/2)
+    if _VFRACS_CLASS:
+        text = re.sub(
+            rf"[{_VFRACS_CLASS}]",
+            lambda m: _VULGAR_TO_ASCII[m.group(0)],
+            text,
+        )
+
+    # Normalize dashes
+    text = text.replace("–", "-").replace("—", "-")
+
+    # Normalize smart quotes and ellipsis
+    text = text.translate({
+        ord("“"): '"',
+        ord("”"): '"',
+        ord("‘"): "'",
+        ord("’"): "'",
+        ord("…"): "...",
+    })
+
+    return text
+
 def make_augmented_qmd(src_qmd: Path, dst_qmd: Path):
     """
     Copy a .qmd and append a visible YAML dump to the end as a code block,
     so the PDF includes the YAML info in its text content.
+
+    Important: Keep the original front matter unchanged for Quarto.
+    Apply normalization to the BODY and to the visible YAML block only.
     """
     raw = src_qmd.read_text(encoding="utf-8")
     yaml_text, body = split_front_matter(raw)
 
+    # Keep original front matter for Quarto metadata handling
     fm_prefix = f"---\n{yaml_text}\n---\n" if yaml_text else ""
+
+    # Normalize only the content that will be rendered as PDF text
+    norm_body = normalize_text_for_pdf(body)
+    norm_yaml_visible = normalize_text_for_pdf(yaml_text)
+
     meta_section = (
         "\n\n## Metadata (YAML)\n\n```yaml\n"
-        f"{yaml_text.strip()}\n```\n"
+        f"{norm_yaml_visible.strip()}\n```\n"
         if yaml_text else ""
     )
 
     dst_qmd.parent.mkdir(parents=True, exist_ok=True)
-    dst_qmd.write_text(fm_prefix + body + meta_section, encoding="utf-8")
+    dst_qmd.write_text(fm_prefix + norm_body + meta_section, encoding="utf-8")
 
 def collect_source_qmds():
     """Yield all source .qmd files to render as PDFs (skip project root index.qmd)."""
@@ -93,7 +216,8 @@ def collect_source_qmds():
 
 def render_pdfs():
     """
-    Create augmented temp .qmds with YAML embedded, then render each to PDF.
+    Create augmented temp .qmds with YAML embedded (and normalized text),
+    then render each to PDF.
 
     NOTE: For single-file renders, Quarto forbids paths in --output.
     We set cwd=target_out_dir and pass only the filename to --output.
@@ -173,7 +297,7 @@ def copy_pdfs_to_data():
 
 def main():
     render_html_site()   # keep your website working
-    render_pdfs()        # build PDFs with YAML in body
+    render_pdfs()        # build PDFs with YAML in body and normalized text
     if CLEAN_DATA_PDF:
         clean_old_pdfs_in_data()
     copy_pdfs_to_data()

@@ -1,3 +1,4 @@
+"prepare_corpus_and_data_locally.py"
 from langchain.schema import Document
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -41,7 +42,7 @@ def add_to_vectorstore(db, chunks):
     chunks_with_ids = calculate_chunk_ids(chunks)
 
     # Add or Update the documents.
-    existing_items = db.get_documents_from_collection()  # IDs are always included by default
+    existing_items = db.scroll_all()  # IDs are always included by default
 
     existing_ids = []
     if existing_items:
@@ -112,6 +113,9 @@ if __name__ == "__main__":
     )
     generate_data_store(vector_store)
 
-    query_rag = "Tran Dinh Khoi"
+    query_rag = "Banana Bread"
     print("Querying RAG")
-    print(vector_store.query(query_text=query_rag, limit=2, threshold=0))
+    results = vector_store.query(query_text=query_rag, limit=2, score_threshold=0)
+    for i, r in enumerate(results, 1):
+        print(f"\nResult {i}: score={r.get('score')}")
+        print("Snippet:", (r.get("page_content") or "")[:200].replace("\n", " "), "…")

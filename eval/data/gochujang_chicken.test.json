@@ -1,13 +1,13 @@
 {
-  "eval_set_id": "evalset135f55",
-  "name": "evalset135f55",
+  "eval_set_id": "gochujang_chicken",
+  "name": "gochujang_chicken",
   "description": null,
   "eval_cases": [
     {
-      "eval_id": "case5fa628",
+      "eval_id": "case048fe6",
       "conversation": [
         {
-          "invocation_id": "e-09002158-3754-4599-ade1-7e7cab2c7a36",
+          "invocation_id": "e-5433a557-ae70-409e-963b-9d4260609c98",
           "user_content": {
             "parts": [
               {
@@ -20,7 +20,7 @@
                 "executable_code": null,
                 "function_call": null,
                 "function_response": null,
-                "text": "Hello"
+                "text": "Hello, can you find me a recipe for chicken?"
               }
             ],
             "role": "user"
@@ -37,19 +37,27 @@
                 "executable_code": null,
                 "function_call": null,
                 "function_response": null,
-                "text": "Hi there! How can I help you today?\n"
+                "text": "Here are a few chicken recipes. One involves cooking chicken in a cast-iron skillet and then baking it in the oven at 400°F for 10-15 minutes. Another recipe suggests roasting a whole chicken at 300°F with vegetables like potatoes, scallions, and limes. A third recipe involves roasting chicken in a skillet with lemon and garlic at an unspecified temperature, checking for doneness after 45 minutes.\n\nWould you like more detailed instructions on any of these recipes?\n\nCitations:\n1) Results for the query 'chicken recipe'\n"
               }
             ],
             "role": null
           },
           "intermediate_data": {
-            "tool_uses": [],
+            "tool_uses": [
+              {
+                "id": "adk-770f2be1-ad03-49e2-9173-48c691160288",
+                "args": {
+                  "query": "chicken recipe"
+                },
+                "name": "qdrant-find"
+              }
+            ],
             "intermediate_responses": []
           },
-          "creation_timestamp": 1759822572.621164
+          "creation_timestamp": 1760001408.189997
         },
         {
-          "invocation_id": "e-78748393-3ca1-4074-906d-56f8bdf05f7f",
+          "invocation_id": "e-f73229d9-6050-4941-ae69-65e5d0fb7fdb",
           "user_content": {
             "parts": [
               {
@@ -62,7 +70,7 @@
                 "executable_code": null,
                 "function_call": null,
                 "function_response": null,
-                "text": "Can you give me a recipe for banana bread?"
+                "text": "Yes, is there one with gochujang?"
               }
             ],
             "role": "user"
@@ -79,7 +87,7 @@
                 "executable_code": null,
                 "function_call": null,
                 "function_response": null,
-                "text": "I am sorry, I cannot provide recipes. I can only answer questions based on the documents that I have access to.\n"
+                "text": "Yes, there is a recipe that uses gochujang. The ingredients include:\n\n*   1 3.5-4 lb whole chicken\n*   1 Tbsp Diamond Crystal or 1.75 tsp Morton kosher salt, plus more\n*   Freshly ground black pepper\n*   5 Tbsp gochujang (Korean hot pepper paste)\n*   1/4 cup plus 2 Tbsp extra-virgin olive oil\n*   2 heads of garlic\n*   1.5” piece fresh ginger\n*   1.5 lb baby Yukon Gold potatoes (about 1.5” in diameter)\n*   5 scallions\n*   2 limes\n*   2 tsp honey\n\nInstructions:\n\n1.  Place a rack in the middle of the oven; preheat to 300°.\n\nWould you like the rest of the instructions?\n\nCitations:\n1) Results for the query 'chicken recipe'\n"
               }
             ],
             "role": null
@@ -88,10 +96,10 @@
             "tool_uses": [],
             "intermediate_responses": []
           },
-          "creation_timestamp": 1759822600.83098
+          "creation_timestamp": 1760001429.414228
         },
         {
-          "invocation_id": "e-3d6bb2e7-7cc2-4cb9-a7fd-a4b421fbc583",
+          "invocation_id": "e-dee4b362-235b-4249-969b-fe3238d1f522",
           "user_content": {
             "parts": [
               {
@@ -104,7 +112,7 @@
                 "executable_code": null,
                 "function_call": null,
                 "function_response": null,
-                "text": "Okay thank you, have a nice day"
+                "text": "Good, can you convert 1/4 cups of olive oil to grams for me please?"
               }
             ],
             "role": "user"
@@ -121,16 +129,24 @@
                 "executable_code": null,
                 "function_call": null,
                 "function_response": null,
-                "text": "You're welcome! You too.\n"
+                "text": "1/4 cup of olive oil is approximately 54.5 grams.\n"
               }
             ],
             "role": null
           },
           "intermediate_data": {
-            "tool_uses": [],
+            "tool_uses": [
+              {
+                "id": "adk-d562aba3-57ee-4a02-b21b-2e9bf09c58f2",
+                "args": {
+                  "request": "1/4 cup olive oil to grams"
+                },
+                "name": "unit_conversion_agent"
+              }
+            ],
             "intermediate_responses": []
           },
-          "creation_timestamp": 1759822622.097714
+          "creation_timestamp": 1760001464.52785
         }
       ],
       "session_input": {
@@ -138,8 +154,8 @@
         "user_id": "user",
         "state": {}
       },
-      "creation_timestamp": 1759822635.280559
+      "creation_timestamp": 1760001485.4811552
     }
   ],
-  "creation_timestamp": 1759822379.502883
+  "creation_timestamp": 1760001473.6978033
 }

@@ -1,0 +1,253 @@
+{
+  "eval_set_id": "longer_evalset",
+  "name": "longer_evalset",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "chicken",
+      "conversation": [
+        {
+          "invocation_id": "e-651a6ec9-bdd2-442d-8245-95901cb959c3",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Hello"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Hi there! How can I help you today?\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760006410.752592
+        },
+        {
+          "invocation_id": "e-b771169b-8b8f-4ee4-9d6d-0e808b31e4f4",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Can you find me a recipe with chicken?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "I found a few recipes with chicken. One involves roasting a whole chicken with vegetables like potatoes and scallions, and another describes cooking chicken in a cast-iron skillet and then baking it in the oven.\n\nWould you like me to share the ingredients or instructions for either of these recipes?\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-b0779285-369e-4040-b4d7-8f2db9ad70e1",
+                "args": {
+                  "query": "recipe with chicken"
+                },
+                "name": "qdrant-find"
+              }
+            ],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760006420.361404
+        },
+        {
+          "invocation_id": "e-80aaa69d-2250-4d6b-8a6c-b14995a10b53",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Give me the recipe for gochujang chicken?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Okay, here is the recipe for gochujang chicken:\n\n**Ingredients:**\n\n*   1 3.5-4-lb. whole chicken\n*   1 Tbsp. Diamond Crystal or 1.75 tsp. Morton kosher salt, plus more\n*   Freshly ground black pepper\n*   5 Tbsp. gochujang (Korean hot pepper paste)\n*   1/4 cup plus 2 Tbsp. extra-virgin olive oil\n*   2 heads of garlic\n*   1.5” piece fresh ginger\n*   1.5 lb. baby Yukon Gold potatoes (about 1.5” in diameter)\n*   5 scallions\n*   2 limes\n*   2 tsp. honey\n\n**Instructions:**\n\n1.  Place a rack in the middle of the oven; preheat to 300°.\n2.  Arrange potatoes and scallions around chicken and roast.\n\nI only have a partial set of instructions. Would you like the instructions for the other chicken recipe I found?\n\nCitations:\n1) Recipe with chicken search result"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760006436.786646
+        },
+        {
+          "invocation_id": "e-ef2ff43a-63cd-40d6-87a2-86dcb77e0bdf",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Can you convert 1/4 cups of olive oil to grams?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "1/4 cup of olive oil is approximately 54.5 grams.\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-2510c38f-4722-417e-a896-eab9d785f8f8",
+                "args": {
+                  "request": "convert 1/4 cups of olive oil to grams"
+                },
+                "name": "unit_conversion_agent"
+              }
+            ],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760006641.66136
+        },
+        {
+          "invocation_id": "e-f0258e25-60d6-4c80-9061-9fe2ba4104e4",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Can you convert 1.5 lbs of potatoes to grams?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "1.5 lbs of potatoes is approximately 680 grams.\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-30f16e99-85c4-48e9-a1a4-40fff25ab6a6",
+                "args": {
+                  "request": "convert 1.5 lbs of potatoes to grams"
+                },
+                "name": "unit_conversion_agent"
+              }
+            ],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760006710.315536
+        }
+      ],
+      "session_input": {
+        "app_name": "agents",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1760006745.3451571
+    }
+  ],
+  "creation_timestamp": 1760006458.833987
+}
